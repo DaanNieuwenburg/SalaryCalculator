@@ -46,9 +46,9 @@ namespace Salary_Calculator
             _toeslagbedrag = toeslagbedrag;
             _toeslagnaam = toeslagnaam;
             _toeslagpercentage = toeslagpercentage;
-            lblToeslagA.Text = "";
-            lblToeslagB.Text = "";
-            lblToeslagC.Text = "";
+            lblToeslagA.Text = _toeslagnaam[0];
+            lblToeslagB.Text = _toeslagnaam[1];
+            lblToeslagC.Text = _toeslagnaam[2];
             lblBedragA.Text = "";
             lblBedragB.Text = "";
             lblBedragC.Text = "";
@@ -113,19 +113,22 @@ namespace Salary_Calculator
             if(_toeslagbedrag[0] > 0)
             {
                 _toeslagpercentage[0] = (100 * _toeslagbedrag[0] / _verdient.Sum());
-                lblPerA.Text = String.Format("{0:n##}", _toeslagpercentage[0] + "%");
+                string temp = _toeslagpercentage[0].ToString("0.##");
+                lblPerA.Text = temp + "%";
                 lblBedragA.Text = "€" + String.Format("{0:n2}", (_toeslagbedrag[0]));
             }
             if(_toeslagbedrag[1] > 0)
             {
                 _toeslagpercentage[1] = (100 * _toeslagbedrag[1] / _verdient.Sum());
-                lblPerB.Text = String.Format("{0:n##}", _toeslagpercentage[1] + "%");
+                string temp = _toeslagpercentage[1].ToString("0.##");
+                lblPerB.Text = temp + "%";
                 lblBedragB.Text = "€" + String.Format("{0:n2}", (_toeslagbedrag[1]));
             }
             if(_toeslagbedrag[2] > 0)
             {
                 _toeslagpercentage[2] = (100 * _toeslagbedrag[2] / _verdient.Sum());
-                lblPerC.Text = String.Format("{0:n##}", _toeslagpercentage[2] + "%");
+                string temp = _toeslagpercentage[2].ToString("0.##");
+                lblPerC.Text = temp + "%";
                 lblBedragC.Text = "€" + String.Format("{0:n2}", (_toeslagbedrag[2]));
             }
         }
@@ -134,19 +137,22 @@ namespace Salary_Calculator
             if (_toeslagpercentage[0] > 0)
             {
                 _toeslagbedrag[0] = (_toeslagpercentage[0] * _verdient.Sum() / 100);
-                lblPerA.Text = String.Format("{0:n##}", _toeslagpercentage[0] + "%");
+                string temp = _toeslagpercentage[0].ToString("0.##");
+                lblPerA.Text = temp + "%";
                 lblBedragA.Text = "€" + String.Format("{0:n2}", (_toeslagbedrag[0]));
             }
             if (_toeslagpercentage[1] > 0)
             {
                 _toeslagbedrag[1] = (_toeslagpercentage[1] * _verdient.Sum() / 100);
-                lblPerB.Text = String.Format("{0:n##}", _toeslagpercentage[1] + "%");
+                string temp = _toeslagpercentage[1].ToString("0.##");
+                lblPerB.Text = temp + "%";
                 lblBedragB.Text = "€" + String.Format("{0:n2}", (_toeslagbedrag[1]));
             }
             if (_toeslagpercentage[2] > 0)
             {
                 _toeslagbedrag[2] = (_toeslagpercentage[2] * _verdient.Sum() / 100);
-                lblPerC.Text = String.Format("{0:n##}", _toeslagpercentage[2] + "%");
+                string temp = _toeslagpercentage[2].ToString("0.##");
+                lblPerC.Text = temp + "%";
                 lblBedragC.Text = "€" + String.Format("{0:n2}", (_toeslagbedrag[2]));
             }
         }
@@ -155,19 +161,19 @@ namespace Salary_Calculator
             if (_kortingbedrag[0] > 0)
             {
                 _kortingpercentage[0] = (100 * _kortingbedrag[0] / _verdient.Sum());
-                lblKPerA.Text = String.Format("{0:0,##}", _kortingpercentage[0] + "%");
+                lblKPerA.Text = String.Format("{0:0,##3}", _kortingpercentage[0] + "%");
                 lblKBedragA.Text = "€" + String.Format("{0:n2}", (_kortingbedrag[0]));
             }
             if (_kortingbedrag[1] > 0)
             {
                 _kortingpercentage[1] = (100 * _kortingbedrag[1] / _verdient.Sum());
-                lblKPerB.Text = String.Format("{0:0,##}", _kortingpercentage[1] + "%");
+                lblKPerB.Text = String.Format("{0:0,##3}", _kortingpercentage[1] + "%");
                 lblKBedragB.Text = "€" + String.Format("{0:n2}", (_kortingbedrag[1]));
             }
             if (_kortingbedrag[2] > 0)
             {
                 _kortingpercentage[2] = (100 * _kortingbedrag[2] / _verdient.Sum());
-                lblKPerC.Text = String.Format("{0:0,##}", _kortingpercentage[2] + "%");
+                lblKPerC.Text = String.Format("{0:0,##3}", _kortingpercentage[2] + "%");
                 lblKBedragC.Text = "€" + String.Format("{0:n2}", (_kortingbedrag[2]));
             }
         }
@@ -176,19 +182,19 @@ namespace Salary_Calculator
             if (_toeslagpercentage[0] > 0)
             {
                 _kortingbedrag[0] = (_kortingpercentage[0] * _verdient.Sum() / 100);
-                lblKPerA.Text = String.Format("{0:0,##}", _kortingpercentage[0] + "%");
+                lblKPerA.Text = String.Format("{0:0,##3}", _kortingpercentage[0] + "%");
                 lblKBedragA.Text = "€" + String.Format("{0:n2}", (_kortingbedrag[0]));
             }
             if (_toeslagpercentage[1] > 0)
             {
                 _kortingbedrag[1] = (_kortingpercentage[1] * _verdient.Sum() / 100);
-                lblKPerB.Text = String.Format("{0:0,##}", _kortingpercentage[1] + "%");
+                lblKPerB.Text = String.Format("{0:0,##3}", _kortingpercentage[1] + "%");
                 lblKBedragB.Text = "€" + String.Format("{0:n2}", (_kortingbedrag[1]));
             }
             if (_toeslagpercentage[2] > 0)
             {
                 _kortingbedrag[2] = (_kortingpercentage[2] * _verdient.Sum() / 100);
-                lblKPerC.Text = String.Format("{0:0,##}", _kortingpercentage[2] + "%");
+                lblKPerC.Text = String.Format("{0:0.00}", _kortingpercentage[2] + "%");
                 lblKBedragC.Text = "€" + String.Format("{0:n2}", (_kortingbedrag[2]));
             }
         }
