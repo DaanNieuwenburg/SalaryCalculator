@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultForm));
             this.lblvoornaam = new System.Windows.Forms.Label();
             this.lblachternaam = new System.Windows.Forms.Label();
             this.lblbedrijf = new System.Windows.Forms.Label();
@@ -629,8 +630,9 @@
             this.Controls.Add(this.lblbedrijf);
             this.Controls.Add(this.lblachternaam);
             this.Controls.Add(this.lblvoornaam);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResultForm";
-            this.Text = "ResultForm";
+            this.Text = "Salary";
             this.Load += new System.EventHandler(this.ResultForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             this.ResumeLayout(false);

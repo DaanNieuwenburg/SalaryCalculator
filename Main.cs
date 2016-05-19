@@ -316,6 +316,10 @@ namespace Salary_Calculator
         {
             Voornaam = tbVoornaam.Text;
             Achternaam = tbAchternaam.Text;
+            if(tbbedrijf.Visible == true)
+            {
+                bedrijf = tbbedrijf.Text;
+            }
             ResultForm _result = new ResultForm(Voornaam, Achternaam, bedrijf, verdient, gewerkteuren, toeslagbedrag, toeslagnaam, kortingbedrag, kortingnaam, toeslagpercentage, kortingpercentage);
             _result.ShowDialog();
         }
