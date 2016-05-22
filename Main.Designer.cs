@@ -74,6 +74,7 @@
             this.lblBedragA = new System.Windows.Forms.Label();
             this.cbBedrijf = new System.Windows.Forms.ComboBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -486,11 +487,22 @@
             this.pbLogo.TabIndex = 45;
             this.pbLogo.TabStop = false;
             // 
+            // btLogin
+            // 
+            this.btLogin.Location = new System.Drawing.Point(577, 7);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(75, 23);
+            this.btLogin.TabIndex = 46;
+            this.btLogin.Text = "Login (temp)";
+            this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 485);
+            this.Controls.Add(this.btLogin);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.cbBedrijf);
             this.Controls.Add(this.label6);
@@ -593,6 +605,7 @@
         private System.Windows.Forms.Label lblBedragA;
         private System.Windows.Forms.ComboBox cbBedrijf;
         private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Button btLogin;
     }
 }
 

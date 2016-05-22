@@ -265,8 +265,8 @@ namespace Salary_Calculator
             }
             else if (_toeslagnaam[1].Length == 0)
             {
-                lblToeslagA.Text = _toeslagnaam[0];
-                lblBedragA.Text = _toeslagbedrag[0].ToString();
+                //lblToeslagA.Text = _toeslagnaam[0];
+                //lblBedragA.Text = _toeslagbedrag[0].ToString();
                 lblToeslagB.Visible = false;
                 lblToeslagC.Visible = false;
                 lblBedragB.Visible = false;

@@ -331,24 +331,34 @@ namespace Salary_Calculator
                 pbLogo.BackgroundImage = Properties.Resources.jumbo_logo;
                 bedrijf = cbBedrijf.Text;
                 tbbedrijf.Visible = false;
+                pbLogo.Visible = true;
             }
             else if (cbBedrijf.Text == "Albert Heijn")
             {
                 pbLogo.BackgroundImage = Properties.Resources.ah_logo;
                 bedrijf = cbBedrijf.Text;
                 tbbedrijf.Visible = false;
+                pbLogo.Visible = true;
             }
             else if (cbBedrijf.Text == "Hoogvliet")
             {
+                pbLogo.Visible = true;
                 pbLogo.BackgroundImage = Properties.Resources.hoogvliet_logo;
                 bedrijf = cbBedrijf.Text;
                 tbbedrijf.Visible = false;
             }
             else if (cbBedrijf.Text == "Custom")
             {
+                pbLogo.Visible = false;
                 tbbedrijf.Visible = true;
                 bedrijf = tbbedrijf.Text;
             }
+        }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            LoginForm _login = new LoginForm();
+            _login.Show();
         }
     }
 }
