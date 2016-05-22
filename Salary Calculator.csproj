@@ -93,6 +93,12 @@
     <Compile Include="ResultForm.Designer.cs">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultFormBruto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultFormBruto.Designer.cs">
+      <DependentUpon>ResultFormBruto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Week.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultFormBruto.resx">
+      <DependentUpon>ResultFormBruto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Week.resx">
       <DependentUpon>Week.cs</DependentUpon>

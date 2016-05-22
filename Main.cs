@@ -320,8 +320,17 @@ namespace Salary_Calculator
             {
                 bedrijf = tbbedrijf.Text;
             }
-            ResultForm _result = new ResultForm(Voornaam, Achternaam, bedrijf, verdient, gewerkteuren, toeslagbedrag, toeslagnaam, kortingbedrag, kortingnaam, toeslagpercentage, kortingpercentage);
-            _result.ShowDialog();
+            if(netto == false)
+            {
+                ResultFormBruto _result = new ResultFormBruto(Voornaam, Achternaam, bedrijf, verdient, gewerkteuren, toeslagbedrag, toeslagnaam, toeslagpercentage);
+                _result.ShowDialog();
+            }
+            else
+            {
+                ResultForm _result = new ResultForm(Voornaam, Achternaam, bedrijf, verdient, gewerkteuren, toeslagbedrag, toeslagnaam, kortingbedrag, kortingnaam, toeslagpercentage, kortingpercentage);
+                _result.ShowDialog();
+            }
+                      
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
